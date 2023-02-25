@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 自動リンクを無効にする -->
+    <meta name="format-detection" content="telephone=no" />
+    <title>eyeroom mira 一人ひとりが羨望の的になる大人上品な華やかさを</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/rosemarine" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="header__title" class="header__title">
+        一人ひとりが羨望の的になる<br />大人上品な華やかさを
+      </h1>
+      <div class="header__menu">
+        <!-- TODO: anker add -->
+        <figure class="header__logo">
+          <img
+            src="./assets/eyeroom-mira-logo-white.svg"
+            alt="アイルームミラのロゴ"
+          />
+        </figure>
+        <a
+          href="https://instagram.com/eyeroom_mira?igshid=YmMyMTA2M2Y="
+          target="_blank"
+          class="header__insta-link"
+          ><figure class="header__instagram">
+            <img
+              src="./assets/instaicon.svg"
+              alt="インスタグラムアイコン"
+            /></figure
+        ></a>
+        <button
+          class="hamburger header__hamburger"
+          type="button"
+          aria-lebel="メニュー"
+        >
+          <span class="hamburger__parts"></span>
+          <span class="hamburger__parts"></span>
+          <span class="hamburger__parts"></span>
+        </button>
+      </div>
+      <div class="nav">
+        <nav class="nav-container" aria-lebel="サイト内メニュー">
+          <div class="nav__image-wrapper--pc">
+            <figure class="nav__image">
+              <img src="./assets/nav-open.png" alt="サロン内受付写真" />
+            </figure>
+          </div>
+          <div class="nav__contents">
+            <ul class="nav__list">
+              <li>
+                <a href="./index.html#menu" class="nav__link">施術メニュー</a>
+              </li>
+              <li><a href="" class="nav__link">料金表</a></li>
+              <li>
+                <a href="./index.html#introduction" class="nav__link"
+                  >スタッフ紹介</a
+                >
+              </li>
+              <li>
+                <a href="./index.html#recruitment" class="nav__link">採用</a>
+              </li>
+              <li>
+                <a href="./index.html#footer" class="nav__link">サロン情報</a>
+              </li>
+            </ul>
+            <button
+              onclick="location.href='./booking.html'"
+              class="book nav__book"
+            >
+              ホットペッパーから予約する
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="overlay"></div>
+    <div class="booking">
+      <div class="booking__container">
+        <div class="booking__text-container">
+          <p class="booking__text">ご希望の店舗をお選びください</p>
+          <p class="booking__subtext">ホットペッパーにページ遷移します</p>
+        </div>
+        <div class="booking__button-container">
+          <button
+            onclick="location.href='https://beauty.hotpepper.jp/kr/slnH000434395/'"
+            class="book booking__button"
+          >
+            eyeroom mira 本店
+          </button>
+          <button
+            onclick="location.href='https://beauty.hotpepper.jp/kr/slnH000599265/'"
+            class="book booking__button"
+          >
+            eyeroom mira 恵比寿店
+          </button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

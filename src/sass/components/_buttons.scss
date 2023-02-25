@@ -1,0 +1,146 @@
+@use "../core/_font" as *;
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+
+.hamburger {
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 30;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+
+  &__parts {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: $base-white;
+    box-sizing: border-box;
+    transition: all 0.5s;
+
+    &:nth-of-type(1) {
+      top: 15px;
+    }
+    &:nth-of-type(2) {
+      top: 23px;
+    }
+    &:nth-of-type(3) {
+      top: 31px;
+    }
+  }
+
+  &.active &__parts {
+    &:nth-of-type(1) {
+      top: 18px;
+      left: 18px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 30%;
+    }
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+    &:nth-of-type(3) {
+      top: 30px;
+      left: 18px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 30%;
+    }
+  }
+}
+
+.book {
+  color: $base-pink;
+  background-color: $base-white;
+  border-radius: 100vh;
+  white-space: nowrap;
+
+  // FIXME:
+  &:hover {
+  }
+}
+
+.viewall {
+  position: relative;
+  color: $base-brown;
+  width: 160px;
+  height: 118px;
+  padding: 0;
+
+  @include mq(tab) {
+    width: 112.54px;
+    height: 83px;
+  }
+  @include mq(sp) {
+    width: 112.54px;
+    height: 83px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__text {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+
+    @include mq(tab) {
+      top: 1.7rem;
+      left: 1.7rem;
+      font-size: 1.2rem;
+    }
+    @include mq(sp) {
+      top: 1.7rem;
+      left: 1.7rem;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.back2top {
+  position: relative;
+  color: $base-brown;
+  width: 95px;
+  height: 127.2px;
+  padding: 0;
+
+  @include mq(tab) {
+    width: 73px;
+    height: 97.75px;
+  }
+  @include mq(sp) {
+    width: 50px;
+    height: 66.95px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__text {
+    @include centeringXY;
+    font-size: 1.4rem;
+
+    @include mq(tab) {
+      font-size: 1.2rem;
+      top: 48%;
+      left: 48%;
+    }
+    @include mq(sp) {
+      font-size: 0.9rem;
+      top: 46%;
+      left: 46%;
+    }
+  }
+}

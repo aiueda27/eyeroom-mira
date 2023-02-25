@@ -1,0 +1,194 @@
+@use "../core/_font" as *;
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+
+.introduction {
+  background-color: $base-beige;
+  padding: 80px 0 100px 0;
+
+  @include mq(tab) {
+    padding-bottom: 50px;
+  }
+  @include mq(sp) {
+    padding-bottom: 50px;
+  }
+
+  &__title-wrapper {
+    max-width: 1040px;
+    margin: 0 auto;
+
+    @include mq(tab) {
+      display: inline-block;
+      text-align: center;
+      padding-left: 16px;
+    }
+    @include mq(sp) {
+      display: inline-block;
+      text-align: center;
+      padding-left: 16px;
+    }
+  }
+
+  &__subtitle {
+    display: inline-block;
+    text-align: center;
+    width: 210px;
+
+    @include mq(tab) {
+      width: initial;
+    }
+    @include mq(sp) {
+      width: initial;
+    }
+  }
+
+  &__contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-top: 34px;
+    // flex: 1 1;
+
+    @include mq(tab) {
+      display: block;
+      padding-top: 50px;
+    }
+    @include mq(sp) {
+      display: block;
+      padding-top: 50px;
+    }
+  }
+  &__left {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 148px;
+      height: 141px;
+      position: absolute;
+      top: -80px;
+      right: -76px;
+      background: url(./assets/circle-decoration@3x.svg) no-repeat;
+      background-size: contain;
+
+      @include mq(tab) {
+        // TODO:
+        display: none;
+        width: 56.51px;
+        height: 38.54px;
+        top: -10%;
+        right: 24%;
+      }
+      @include mq(sp) {
+        // TODO:
+        display: none;
+        width: 56.51px;
+        height: 38.54px;
+        top: -10%;
+        right: 10%;
+      }
+    }
+  }
+
+  &__right {
+    max-width: 574px;
+    display: inline-block;
+
+    @include mq(tab) {
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    @include mq(sp) {
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+
+  &__image {
+    max-width: 388px;
+
+    @include mq(tab) {
+      max-width: 340px;
+      margin: 0 auto;
+    }
+    @include mq(sp) {
+      max-width: 234px;
+      margin: 0 auto;
+    }
+  }
+
+  &__name-en {
+    @include centeringX;
+    top: 84%;
+    font-size: 4.5rem;
+    color: $base-pink;
+    font-family: $rose;
+    margin: 0;
+    line-height: 1;
+    white-space: nowrap;
+
+    @include mq(tab) {
+      font-size: 3.8rem;
+    }
+    @include mq(sp) {
+      font-size: 3rem;
+    }
+  }
+
+  &__name-jp {
+    // @include centeringX;
+    // top: 105%;
+    font-size: 2.4rem;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+    padding-top: 16px;
+
+    @include mq(tab) {
+      font-size: 2rem;
+    }
+    @include mq(sp) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    line-height: 2;
+    margin-bottom: 24px;
+
+    @include mq(tab) {
+      display: inline-block;
+      font-size: 1.6rem;
+      margin-top: 40px;
+      margin-bottom: 22px;
+      padding: 0 16px;
+    }
+    @include mq(sp) {
+      display: inline-block;
+      font-size: 1.6rem;
+      margin-top: 40px;
+      margin-bottom: 22px;
+      padding: 0 16px;
+    }
+  }
+
+  &__subtext {
+    max-width: 394px;
+    font-size: 1.4rem;
+
+    @include mq(tab) {
+      font-size: 1.4rem;
+      padding: 0 16px;
+    }
+    @include mq(sp) {
+      font-size: 1.2rem;
+      padding: 0 16px;
+    }
+  }
+}

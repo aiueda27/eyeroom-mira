@@ -1,0 +1,143 @@
+@use "../core/_font" as *;
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+
+.recruitment {
+  background-color: $base-pink;
+  padding: 80px 0 10px 0;
+
+  &__title-wrapper {
+    max-width: 1040px;
+    margin: 0 auto;
+
+    @include mq(tab) {
+      margin-left: 16px;
+    }
+    @include mq(sp) {
+      margin-left: 16px;
+    }
+  }
+
+  &__title {
+    color: $base-white;
+    display: inline-block;
+    text-align: center;
+    width: 150px;
+
+    @include mq(tab) {
+      width: 112px;
+    }
+    @include mq(sp) {
+      width: 85px;
+    }
+  }
+
+  &__subtitle {
+    color: $base-white;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    color: $base-white;
+    line-height: 2;
+    margin: 40px 0 16px 0;
+  }
+
+  &__link {
+    color: $base-white;
+    text-decoration: underline;
+  }
+
+  &__image-container--pc {
+    display: flex;
+    gap: 23px;
+    justify-content: flex-end;
+
+    @include mq(tab) {
+      display: none;
+    }
+    @include mq(sp) {
+      display: none;
+    }
+  }
+
+  &__image {
+    max-width: 335px;
+
+    img {
+      height: 251px;
+    }
+  }
+
+  &__carousel-wrapper--sp {
+    display: none;
+
+    @include mq(tab) {
+      display: block;
+      width: 100%;
+      padding: 50px 0 40px 0;
+      overflow-x: scroll;
+    }
+    @include mq(sp) {
+      display: block;
+      width: 100%;
+      padding: 50px 0 40px 0;
+      overflow-x: scroll;
+    }
+  }
+
+  &__carousel {
+    @include mq(tab) {
+      height: 251px;
+    }
+    @include mq(sp) {
+      height: 174px;
+    }
+  }
+
+  &__carousel-item {
+    @include mq(tab) {
+      width: initial;
+      height: 251px;
+    }
+    @include mq(sp) {
+      width: initial;
+      height: 174px;
+    }
+  }
+
+  &__carousel-link {
+    @include mq(tab) {
+      height: 100%;
+    }
+    @include mq(sp) {
+      height: 100%;
+    }
+  }
+
+  &__carousel-image {
+    @include mq(tab) {
+      height: 100%;
+      object-fit: contain;
+    }
+    @include mq(sp) {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__image-container--sp {
+    display: none;
+
+    @include mq(tab) {
+      display: block;
+      width: 340px;
+      margin: 50px 16px 40px auto;
+    }
+    @include mq(sp) {
+      display: block;
+      width: 340px;
+      margin: 50px 0 40px auto;
+    }
+  }
+}

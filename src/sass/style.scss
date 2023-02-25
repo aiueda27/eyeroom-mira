@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*
+Theme Name: eyeroom-mira
+*/
+
+// core
+@use "core/_normalize";
+@use "core/_font";
+@use "core/_color";
+@use "core/_base";
+
+// abstracts
+@use "abstracts/_breakpoints";
+@use "abstracts/_mixins";
+@use "abstracts/_variables";
+
+// components
+@use "components/_overlay";
+@use "components/_title";
+@use "components/_buttons";
+@use "components/_carousel";
+@use "components/_price-table";
+
+// layout
+@use "layout/_header";
+@use "layout/_navigation";
+@use "layout/_footer";
+
+// sections
+@use "sections/_firstview";
+@use "sections/_menu";
+@use "sections/_prices";
+@use "sections/_introduction";
+@use "sections/_recruitment";
+
+// pages
+@use "pages/_home";
+@use "pages/_booking";
+
+@use "abstracts/_helper";

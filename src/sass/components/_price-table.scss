@@ -1,0 +1,190 @@
+@use "../core/_font" as *;
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+
+.price-table {
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(tab) {
+    flex-direction: column;
+  }
+
+  &__left {
+    display: flex;
+    gap: 30px;
+
+    @include mq(tab) {
+      justify-content: center;
+    }
+
+    @include mq(sp) {
+      justify-content: center;
+      gap: 16px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+
+    @include mq(tab) {
+      justify-content: center;
+    }
+
+    @include mq(sp) {
+      justify-content: center;
+      gap: 16px;
+    }
+  }
+
+  &__line {
+    width: 1px;
+    // height: 831px;
+    background-color: $base-white;
+  }
+
+  &__text-container {
+    min-width: 330px;
+
+    @include mq(sp) {
+      min-width: 248px;
+    }
+  }
+
+  &__price-container {
+    min-width: 54px;
+  }
+
+  &__row {
+    // display: inline-block;
+    max-width: 396px;
+    margin-bottom: 100px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+
+      @include mq(tab) {
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  &__right > &__text-container > &__row:nth-child(2) {
+    margin-bottom: 153.89px;
+
+    @include mq(tab) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__right > &__text-container > &__row:last-of-type {
+    @include mq(tab) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__row-title {
+    font-size: 3rem;
+    letter-spacing: 0.05rem;
+    font-family: $rose;
+    color: $base-white;
+    display: inline-block;
+    text-align: left;
+    margin: 0;
+
+    @include mq(sp) {
+      font-size: 2rem;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      vertical-align: middle;
+      margin-right: 16px;
+
+      @include mq(sp) {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+      }
+    }
+
+    &--lash-icon::before {
+      background: url("./assets/eyelashes-icon.svg") no-repeat;
+
+      @include mq(sp) {
+        background: url("./assets/eyelashes-icon-sp.svg") no-repeat;
+      }
+    }
+
+    &--brow-icon::before {
+      background: url("./assets/eyebrow-icon.svg") no-repeat;
+
+      @include mq(sp) {
+        background: url("./assets/eyebrow-icon-sp.svg") no-repeat;
+      }
+    }
+
+    &--facials-icon::before {
+      background: url("./assets/facial-treatment-icon.svg") no-repeat;
+
+      @include mq(sp) {
+        background: url("./assets/facial-treatment-icon-sp.svg") no-repeat;
+      }
+    }
+  }
+
+  &__item {
+    font-size: 1.4rem;
+    line-height: 2.85;
+    letter-spacing: 0.05rem;
+    text-align: right;
+  }
+
+  &__price-row {
+    // display: inline-block;
+    max-width: 396px;
+    padding-top: 100px;
+    margin-bottom: 100px;
+
+    @include mq(sp) {
+      padding-top: 40px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+
+      @include mq(tab) {
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  &__right > &__price-container > &__price-row:nth-child(2) {
+    margin-bottom: 153.89px;
+
+    @include mq(tab) {
+      margin-bottom: 100px;
+    }
+    @include mq(sp) {
+      padding-top: 46px;
+    }
+  }
+
+  &__right > &__price-container > &__price-row:last-of-type {
+    @include mq(tab) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__price {
+    font-size: 1.4rem;
+    line-height: 2.85;
+    letter-spacing: 0.05rem;
+    text-align: left;
+  }
+}

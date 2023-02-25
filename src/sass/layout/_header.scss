@@ -1,0 +1,115 @@
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+@use "sass:math";
+
+.header {
+  width: 100%;
+  height: 80px;
+
+  @include mq(tab) {
+    height: 60px;
+  }
+  @include mq(sp) {
+    height: 50px;
+  }
+
+  &__title {
+    position: absolute;
+    top: 40vh;
+    left: 57%;
+    // font-size: 5rem;
+    color: $base-white;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 0.02rem;
+
+    @include mq(tab) {
+      top: 80vh;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.4rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+    @include mq(sp) {
+      top: 70vh;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 20;
+    background-color: $base-pink;
+
+    @include mq(tab) {
+      height: 60px;
+    }
+    @include mq(sp) {
+      height: 50px;
+    }
+  }
+
+  &__logo-link {
+    @include centeringX;
+    height: 64.84px;
+
+    @include mq(tab) {
+      transform: translateX(0);
+      left: 20px;
+      height: 34.22px;
+    }
+    @include mq(sp) {
+      transform: translateX(0);
+      left: 20px;
+      height: 34.22px;
+    }
+  }
+
+  &__logo {
+    width: 200px;
+
+    @include mq(tab) {
+      width: 101px;
+    }
+    @include mq(sp) {
+      width: 101px;
+    }
+  }
+
+  &__insta-link {
+    margin-right: pxToPer(20, 1440);
+
+    @include mq(tab) {
+      display: none;
+    }
+    @include mq(sp) {
+      display: none;
+    }
+  }
+
+  &__instagram {
+    width: 32px;
+    padding: 10px;
+  }
+  &__hamburger {
+    margin-right: pxToPer(200, 1440);
+
+    @include mq(tab) {
+      margin-right: 0;
+    }
+    @include mq(sp) {
+      margin-right: 0;
+    }
+  }
+}

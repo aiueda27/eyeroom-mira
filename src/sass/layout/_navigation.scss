@@ -1,0 +1,148 @@
+@use "../core/_font" as *;
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+
+.nav {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  padding-top: 80px;
+  background-color: $base-beige;
+  transition: all 0.6s;
+
+  @include mq(tab) {
+    padding-top: 0;
+    height: 100vh;
+    height: 100dvh;
+  }
+  @include mq(sp) {
+    padding-top: 0;
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(tab) {
+      padding-top: 60px;
+      display: block;
+    }
+    @include mq(sp) {
+      padding-top: 50px;
+      display: block;
+    }
+  }
+
+  &__image-wrapper--pc {
+    width: pxToPer(833, 1440);
+
+    @include mq(tab) {
+      display: none;
+    }
+    @include mq(sp) {
+      display: none;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      max-width: initial;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__contents {
+    padding-right: pxToPer(200, 1440);
+    padding-bottom: 50px;
+
+    @include mq(tab) {
+      padding-right: 16px;
+    }
+    @include mq(sp) {
+      padding-right: 16px;
+    }
+  }
+
+  &__list {
+    margin-top: 60px;
+    list-style: none;
+    text-align: right;
+
+    @include mq(tab) {
+      margin-top: 48px;
+    }
+    @include mq(sp) {
+      margin-top: 48px;
+    }
+
+    > li {
+      @include mq(tab) {
+        margin-bottom: 10px;
+      }
+      @include mq(sp) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: $base-pink;
+    text-decoration: none;
+    padding: 8px;
+    letter-spacing: 0.1em;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__insta-logo {
+    // img > svg > path {
+    //   -webkit-mask-size: cover;
+    //   mask-size: cover;
+    //   background-color: $base-black;
+    //   fill: black;
+    // filter: invert(17%) sepia(32%) saturate(565%) hue-rotate(349deg)
+    //   brightness(92%) contrast(87%);
+    // filter: rgb(64, 51, 38);
+    filter: brightness(0) saturate(100%) invert(64%) sepia(63%) saturate(235%)
+      hue-rotate(337deg) brightness(91%) contrast(85%);
+
+    // }
+  }
+
+  &__book {
+    margin-top: 54px;
+    color: $base-white;
+    background-color: $base-pink;
+
+    @include mq(tab) {
+      position: absolute;
+      bottom: 26px;
+      left: 50%;
+      transform: translate(-50%);
+      margin-top: 0;
+    }
+    @include mq(sp) {
+      position: absolute;
+      bottom: 26px;
+      left: 50%;
+      transform: translate(-50%);
+      margin-top: 0;
+    }
+  }
+}

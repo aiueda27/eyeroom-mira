@@ -1,0 +1,46 @@
+@use "../core/_font" as *;
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+
+.prices {
+  background-color: $base-pink;
+  padding: 80px 0 100px 0;
+
+  &__title-wrapper {
+    max-width: 1040px;
+    margin: 0 auto;
+
+    @include mq(tab) {
+      display: inline-block;
+      text-align: center;
+      padding-left: 16px;
+    }
+    @include mq(sp) {
+      display: inline-block;
+      text-align: center;
+      padding-left: 16px;
+    }
+  }
+
+  &__title {
+    color: $base-white;
+  }
+  &__subtitle {
+    display: inline-block;
+    text-align: center;
+    width: 105px;
+    color: $base-white;
+
+    @include mq(tab) {
+      width: initial;
+    }
+    @include mq(sp) {
+      width: initial;
+    }
+  }
+
+  &__contents {
+    max-width: 1040px;
+    margin: 94px auto 0 auto;
+  }
+}

@@ -1,0 +1,31 @@
+@use "../core/_font" as *;
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+
+.sp-only {
+  display: none;
+
+  @include mq(tab) {
+    display: none;
+  }
+  @include mq(sp) {
+    display: block;
+  }
+}
+
+.sp-tab-only {
+  display: none;
+
+  @include mq(tab) {
+    display: block;
+  }
+  @include mq(sp) {
+    display: block;
+  }
+}
+
+.lh15-sp {
+  @include mq(sp) {
+    line-height: 1.5;
+  }
+}

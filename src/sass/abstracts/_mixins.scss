@@ -1,0 +1,26 @@
+@use "../abstracts/_breakpoints" as *;
+@use "sass:math";
+
+// メディアクエリ
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+    @content;
+  }
+}
+
+// pxから％に変換する
+@function pxToPer($child, $parent) {
+  @return math.div($child * 1%, $parent) * 100;
+}
+
+@mixin centeringXY {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin centeringX {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

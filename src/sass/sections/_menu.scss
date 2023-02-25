@@ -1,0 +1,76 @@
+@use "../core/_font" as *;
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  // padding: 0 0 0 200px;
+  background-color: $base-beige;
+
+  @include mq(tab) {
+    display: block;
+    position: relative;
+    padding-bottom: 134px;
+  }
+  @include mq(sp) {
+    display: block;
+    position: relative;
+    padding-bottom: 134px;
+  }
+
+  &__left {
+    max-width: 364px;
+    padding-right: pxToPer(153, 1440);
+    text-align: center;
+    position: relative;
+    padding-bottom: 6%;
+
+    @include mq(tab) {
+      display: inline-block;
+      position: static;
+      padding: 50px 16px;
+    }
+    @include mq(sp) {
+      display: inline-block;
+      position: static;
+      padding: 50px 16px;
+    }
+  }
+
+  &__viewall {
+    position: absolute;
+    top: 100%;
+    left: 16%;
+
+    @include mq(tab) {
+      top: initial;
+      bottom: 4%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+    @include mq(sp) {
+      top: initial;
+      bottom: 6%;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+
+  &__right {
+    width: pxToPer(878, 1440);
+    max-width: 878px;
+    overflow-x: scroll;
+    padding: 200px 0;
+
+    @include mq(tab) {
+      width: 100%;
+      padding: 44px 0;
+    }
+    @include mq(sp) {
+      width: 100%;
+      padding: 44px 0;
+    }
+  }
+}

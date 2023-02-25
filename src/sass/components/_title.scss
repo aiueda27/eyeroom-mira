@@ -1,0 +1,33 @@
+@use "../core/_font" as *;
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+
+.title {
+  font-size: 3.5rem;
+  color: $base-pink;
+  margin: 0;
+  line-height: 2;
+
+  @include mq(tab) {
+    font-size: 2.2rem;
+  }
+  @include mq(sp) {
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+  font-size: 2.3rem;
+  color: $base-pink;
+  font-family: $rose;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+
+  @include mq(tab) {
+    font-size: 1.8rem;
+  }
+  @include mq(sp) {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,73 @@
+@use "../core/_font" as *;
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $noto;
+  font-weight: 400;
+  color: $base-black;
+
+  &.active {
+    width: 100%;
+    background-color: $base-black;
+  }
+}
+
+figure,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  line-height: 1.5;
+  padding: 1.5rem 2.5rem;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: $base-pink;
+
+  &[href^="tel:"] {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  @include mq(sp) {
+    &[href^="tel:"] {
+      pointer-events: auto;
+      cursor: default;
+    }
+  }
+}
+
+address {
+  font-style: normal;
+}

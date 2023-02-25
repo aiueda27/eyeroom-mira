@@ -1,0 +1,43 @@
+@use "../core/_font" as *;
+@use "../core/_color" as *;
+@use "../abstracts/mixins" as *;
+
+.carousel {
+  display: flex;
+  gap: pxToPer(34, 1440);
+
+  // flex-wrap: nowrap;
+  &__item {
+    flex-shrink: 0;
+    width: 330px;
+
+    @include mq(tab) {
+      width: 284px;
+    }
+    @include mq(sp) {
+      width: 284px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $base-black;
+    text-align: center;
+
+    @include mq(tab) {
+      font-size: 1.6rem;
+    }
+    @include mq(sp) {
+      font-size: 1.6rem;
+    }
+  }
+}
