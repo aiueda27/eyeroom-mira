@@ -71,7 +71,15 @@
       position: absolute;
       top: -80px;
       right: -76px;
-      background: url(./assets/circle-decoration@3x.svg) no-repeat;
+      background-image: url(./assets/circle-decoration.png);
+      background-image: image-set(
+        url(./assets/circle-decoration.png) 1x,
+        url(./assets/circle-decoration@2x.png) 2x
+      );
+      background-image: -webkit-image-set(
+        url(./assets/circle-decoration.png) 1x,
+        url(./assets/circle-decoration@2x.png) 2x
+      );
       background-size: contain;
 
       @include mq(tab) {
@@ -83,12 +91,7 @@
         right: 24%;
       }
       @include mq(sp) {
-        // TODO:
         display: none;
-        width: 56.51px;
-        height: 38.54px;
-        top: -10%;
-        right: 10%;
       }
     }
   }
@@ -117,7 +120,7 @@
       margin: 0 auto;
     }
     @include mq(sp) {
-      max-width: 234px;
+      max-width: 95%;
       margin: 0 auto;
     }
   }
@@ -136,6 +139,7 @@
       font-size: 3.8rem;
     }
     @include mq(sp) {
+      top: 88%;
       font-size: 3rem;
     }
   }

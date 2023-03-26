@@ -17,34 +17,20 @@
     display: block;
   }
 
-  &__image--pc {
-    display: block;
-    // FIXME:仮置き
+  &__image {
     width: 50%;
     max-width: 634px;
     padding-bottom: 6%;
 
     @include mq(tab) {
-      display: block;
       width: 90%;
       max-width: initial;
       min-width: 530px;
-      margin: 0 auto;
+      margin: 0 5%;
     }
     @include mq(sp) {
-      display: none;
-    }
-  }
-
-  &__image--sp {
-    display: none;
-
-    @include mq(tab) {
-      display: none;
-    }
-    @include mq(sp) {
-      display: block;
       width: 100%;
+      margin: 0;
     }
   }
 

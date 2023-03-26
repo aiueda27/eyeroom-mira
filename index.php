@@ -2,12 +2,14 @@
 <main>
 <div class="overlay"></div>
       <section id="fv" class="fv">
-        <figure class="fv__image--pc">
-          <img src="<?php bloginfo('template_url');?>/assets/topimg@2x.png" alt="メイン女性画像" />
-        </figure>
-        <figure class="fv__image--sp">
+        <picture class="fv__image">
+          <!-- PC&Tablet -->
+          <source srcset="<?php bloginfo('template_url');?>/assets/topimg.png 634w, <?php bloginfo('template_url');?>/assets/topimg@2x.png 1268w, <?php bloginfo('template_url');?>/assets/topimg@3x.png 1268w" sizes="(max-width:991px) 90vw, 634px" media="(min-width: 521px)">
+          <img src="<?php echo esc_url(get_theme_file_uri('./assets/topimg-sp.jpg')); ?>" srcset="<?php echo esc_url(get_theme_file_uri('./assets/topimg-sp@2x.jpg')); ?> 640w, <?php echo esc_url(get_theme_file_uri('./assets/topimg-sp@3x.jpg')); ?> 960w" alt="メイン女性画像" />
+        </picture>
+        <!-- <figure class="fv__image--sp">
           <img src="<?php echo esc_url(get_theme_file_uri('./assets/top-img-sp@2x.png')); ?>" alt="メイン女性画像" />
-        </figure>
+        </figure> -->
         <div class="fv__button-container">
             <!-- TODO: -->
           <button
@@ -212,7 +214,7 @@
         <div class="introduction__contents">
           <div class="introduction__left">
             <figure class="introduction__image">
-              <img src="<?php echo esc_url(get_theme_file_uri('./assets/owner-image@2x.png')); ?>" alt="店舗オーナー写真" />
+              <img src="<?php echo esc_url(get_theme_file_uri('./assets/owner-image@2x.png')); ?>" srcset="<?php echo esc_url(get_theme_file_uri('./assets/owner-image-sp.png')); ?> 310w, <?php echo esc_url(get_theme_file_uri('./assets/owner-image.png')); ?> 390w, <?php echo esc_url(get_theme_file_uri('./assets/owner-image@2x.png')); ?> 780w, <?php echo esc_url(get_theme_file_uri('./assets/owner-image@3x.png')); ?> 1170w" sizes="(max-width:520px) 95vw, (max-width:991px) 340px, 388px" alt="店舗オーナー写真" />
             </figure>
             <p class="introduction__name-en">eri miratsu</p>
             <p class="introduction__name-jp">見良津 恵理</p>
@@ -239,7 +241,6 @@
         <div class="recruitment__title-wrapper">
           <h2 class="title recruitment__title">採用</h2>
           <p class="subtitle recruitment__subtitle">recruitment</p>
-          <!-- TODO: -->
           <p class="recruitment__text">
             一緒に働いてくださるスタッフを募集しています<br />
             <a href="https://work.salonboard.com/kr/slnH000599265/" class="recruitment__link">こちらから</a>お気軽にお問い合わせください
@@ -247,13 +248,13 @@
         </div>
         <ul class="recruitment__image-container--pc">
           <li class="recruitment__image">
-            <img src="<?php echo esc_url(get_theme_file_uri('./assets/slon-img1@2x.png')); ?>" alt="サロン内受付写真" />
+            <img src="<?php echo esc_url(get_theme_file_uri('./assets/salon-img1.jpg')); ?>" srcset="<?php echo esc_url(get_theme_file_uri('./assets/salon-img1@2x.jpg')); ?> 670w, <?php echo esc_url(get_theme_file_uri('./assets/salon-img1@3x.jpg')); ?> 1005w" sizes="334px" alt="サロン内受付写真" />
           </li>
           <li class="recruitment__image">
-            <img src="<?php echo esc_url(get_theme_file_uri('./assets/slon-img2@2x.png')); ?>" alt="サロン内施術室前写真" />
+            <img src="<?php echo esc_url(get_theme_file_uri('./assets/salon-img2.jpg')); ?>" srcset="<?php echo esc_url(get_theme_file_uri('./assets/salon-img2@2x.jpg')); ?> 670w, <?php echo esc_url(get_theme_file_uri('./assets/salon-img2@3x.jpg')); ?> 1005w" sizes="334px" alt="サロン内施術室前写真" />
           </li>
           <li class="recruitment__image">
-            <img src="<?php echo esc_url(get_theme_file_uri('./assets/slon-img3@2x.png')); ?>" alt="サロン内化粧室写真" />
+            <img src="<?php echo esc_url(get_theme_file_uri('./assets/salon-img3@2x.jpg')); ?>" srcset="<?php echo esc_url(get_theme_file_uri('./assets/salon-img3@2x.jpg')); ?> 336w, <?php echo esc_url(get_theme_file_uri('./assets/salon-img3@3x.jpg')); ?> 504w" sizes="168px" alt="サロン内化粧室写真" />
           </li>
         </ul>
         <!-- TODO: -->
@@ -283,7 +284,7 @@
           </div>
         </div> -->
         <figure class="recruitment__image-container--sp">
-          <img src="<?php echo esc_url(get_theme_file_uri('/assets/slon-img1@2x.png')); ?>" alt="サロン内受付写真">
+          <img src="<?php echo esc_url(get_theme_file_uri('/assets/slon-img1.jpg')); ?>" srcset="<?php echo esc_url(get_theme_file_uri('./assets/salon-img1@2x.jpg')); ?> 670w, <?php echo esc_url(get_theme_file_uri('./assets/salon-img1@3x.jpg')); ?> 1005w" sizes="340px" alt="サロン内受付写真">
         </figure>
       </section>
       </main>

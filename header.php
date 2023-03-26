@@ -69,8 +69,7 @@
         <nav class="nav-container" aria-lebel="サイト内メニュー">
             <div class="nav__image-wrapper--pc">
             <figure class="nav__image">
-                <img src="<?php echo esc_url(get_theme_file_uri('./assets/nav-open.png')); ?>" alt="サロン内受付写真" />
-                <!-- <img src="./assets/nav-open.png" alt="サロン内受付写真" /> -->
+                <img src="<?php echo esc_url(get_theme_file_uri('./assets/nav-open.jpg')); ?>" srcset="<?php echo esc_url(get_theme_file_uri('./assets/nav-open@2x.jpg')); ?> 1674w, <?php echo esc_url(get_theme_file_uri('./assets/nav-open@3x.jpg')); ?> 2511w" sizes="58vw" alt="サロン内受付写真" />
             </figure>
             </div>
             <div class="nav__contents">
